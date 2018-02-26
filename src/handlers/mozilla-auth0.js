@@ -161,16 +161,16 @@ class Handler {
       return;
     }
 
-    let encodedUserId = identity.split('/')[1];
+    let userId = identity.split('/')[1];
 
     // Reverse the github username appending, stripping the username.  Note
     // that github says, "Username may only contain alphanumeric characters or
     // single hyphens, and cannot begin or end with a hyphen"
-    if (encodedUserId.startsWith('github|')) {
-      encodedUserId = encodedUserId.replace(/\|[^|]*$/, '');
+    if (userId.startsWith('github|')) {
+      userId = userId.replace(/\|[^|]*$/, '');
     }
 
-    return decode(encodedUserId);
+    return userId;
   }
 
   identityFromProfile(profile) {
