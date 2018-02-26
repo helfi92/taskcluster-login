@@ -1,4 +1,5 @@
-const ALLOWED_CHARACTERS_IN_CLIENT_ID = ['|'];
+// characters that would otherwise be changed when encoded
+const ALLOWED_CHARACTERS_IN_CLIENT_ID = ['|', '@', ':', '+'];
 
 module.exports = {
   // the second capturing group is used to catch a user's github username
